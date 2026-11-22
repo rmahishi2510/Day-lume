@@ -1,0 +1,316 @@
+/* =================================
+   DAYLUME - MAIN THEME
+================================= */
+
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f5efe6;
+    --card: #fffaf3;
+    --primary: #76543f;
+    --secondary: #a98467;
+    --text: #49372c;
+    --border: #e6d8c8;
+}
+
+/* =================================
+   GENERAL STYLING
+================================= */
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+}
+
+button, a, input, select {
+    font: inherit;
+}
+
+/* =================================
+   HOME PAGE
+================================= */
+
+.home-header {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.home-header h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+.home-header p {
+    color: var(--secondary);
+}
+
+.welcome-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.welcome-message {
+    margin: 20px 0;
+}
+
+#current-date,
+#current-time {
+    color: var(--secondary);
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.start-button,
+.continue-button {
+    display: block;
+    text-decoration: none;
+    margin: 15px auto;
+    padding: 13px 20px;
+    max-width: 250px;
+    border-radius: 12px;
+}
+
+.start-button {
+    background-color: var(--primary);
+    color: white;
+}
+
+.continue-button {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 10px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+/* =================================
+   DASHBOARD LAYOUT
+================================= */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--card);
+    padding: 25px 18px;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar h1 {
+    font-size: 30px;
+}
+
+.sidebar p {
+    color: var(--secondary);
+    margin-bottom: 25px;
+}
+
+.sidebar nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 9px;
+}
+
+.sidebar nav a:hover {
+    background-color: var(--background);
+}
+
+.dashboard {
+    flex: 1;
+    padding: 35px;
+}
+
+/* =================================
+   SECTIONS AND CARDS
+================================= */
+
+section {
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(80, 55, 35, 0.04);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+/* =================================
+   INPUTS
+================================= */
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: white;
+    color: var(--text);
+}
+
+/* =================================
+   CALENDAR
+================================= */
+
+#calendar-container {
+    margin: 20px 0;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--secondary);
+}
+
+/* =================================
+   IPHONE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .app-container {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 18px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px;
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+        background-color: var(--background);
+    }
+
+    .dashboard {
+        padding: 20px 15px;
+    }
+
+    .welcome-section {
+        margin: 25px auto;
+    }
+
+    .welcome-section h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    button {
+        min-height: 44px;
+    }
+}
+
+/* ==================================
+   DAYLUME - CALENDAR DESIGN
+================================== */
+
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.calendar-day {
+    background-color: #f5efe6;
+    border: 1px solid #e6d8c8;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calendar-day strong {
+    color: #76543f;
+}
+
+.calendar-day span,
+.calendar-day small {
+    color: #49372c;
+}
+
+.calendar-day.completed {
+    background-color: #e5eadf;
+    border-color: #a6b59b;
+}
+
+.calendar-day.today {
+    border: 2px solid #76543f;
+}
+
+.calendar-day.missed {
+    opacity: 0.65;
+}
+
+@media (min-width: 600px) {
+    #calendar-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

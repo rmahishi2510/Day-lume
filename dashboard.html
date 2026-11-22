@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Daylume | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h1>Daylume.</h1>
+            <p>A brighter beginning</p>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#challenge">Sugar-free Challenge</a>
+                <a href="#steps">Step Tracker</a>
+                <a href="#yoga">Morning Yoga</a>
+                <a href="#water">Water Tracker</a>
+                <a href="#food">Food Guide</a>
+                <a href="#calendar">Calendar</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard">
+
+            <!-- HOME -->
+            <section id="home">
+                <h2>Welcome back, Rakshita! 🤎</h2>
+                <p>Your little progress matters every day.</p>
+
+                <div class="card">
+                    <h3>Today's Motivation</h3>
+                    <p id="daily-quote">
+                        Every small step creates a brighter tomorrow.
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="challenge">
+
+    <h2>Your Daily Wellness Journey</h2>
+
+    <div class="card">
+
+        <h3 id="challenge-day">Day 1</h3>
+
+        <p id="challenge-progress">
+            Completed days: 0
+        </p>
+
+        <p id="challenge-streak">
+            Current streak: 0 days
+        </p>
+
+        <p id="challenge-remaining">
+            Keep going at your own pace!
+        </p>
+
+        <button id="sugar-check">
+            Complete Today's Check-in
+        </button>
+
+    </div>
+
+</section>
+
+            <!-- STEPS -->
+            <section id="steps">
+                <h2>Daily Steps</h2>
+
+                <div class="card">
+                    <h3>8,000 Steps Goal</h3>
+
+                    <input type="number"
+                           id="step-input"
+                           placeholder="Enter your steps">
+
+                    <button id="save-steps">
+                        Save Steps
+                    </button>
+
+                    <p id="step-progress">0 / 8000 steps</p>
+                </div>
+            </section>
+
+
+            <!-- YOGA -->
+            <section id="yoga">
+                <h2>Morning Yoga</h2>
+
+                <div class="card">
+                    <p>Make time for yourself every morning.</p>
+
+                    <label for="yoga-time">
+                        Reminder time
+                    </label>
+
+                    <input type="time" id="yoga-time">
+
+                    <button id="save-yoga-time">
+                        Save Reminder
+                    </button>
+
+                    <button id="yoga-check">
+                        Mark Yoga Complete
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- WATER -->
+            <section id="water">
+                <h2>Water Tracker</h2>
+
+                <div class="card">
+                    <h3>Daily Goal: 13 Glasses</h3>
+
+                    <p id="water-count">0 / 13 glasses</p>
+
+                    <button id="add-water">
+                        + Add Glass
+                    </button>
+
+                    <button id="remove-water">
+                        - Remove Glass
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- FOOD GUIDE -->
+            <section id="food">
+
+    <h2>My Food Diary 🍽️</h2>
+
+    <div class="card">
+
+        <h3>Record Your Meals</h3>
+
+        <label for="meal-type">Select Meal</label>
+
+        <select id="meal-type">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Dinner">Dinner</option>
+        </select>
+
+        <label for="food-input">What did you eat?</label>
+
+        <input
+            type="text"
+            id="food-input"
+            placeholder="Example: 2 dosas with chutney"
+        >
+
+        <button id="save-food">Save Meal</button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Today's Food Record</h3>
+
+        <div id="food-diary">
+            Your meals will appear here.
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Ask Daylume 🤎</h3>
+
+        <p>Have a particular food craving or meal in mind?</p>
+
+        <input
+            type="text"
+            id="food-question"
+            placeholder="Example: I want dosa"
+        >
+
+        <button id="get-food-suggestion">
+            Get Meal Suggestion
+        </button>
+
+        <div id="food-suggestion"></div>
+
+    </div>
+
+</section>
+           <section id="calendar">
+
+    <h2>Your Progress Calendar</h2>
+
+    <div class="card">
+
+        <h3 id="calendar-title">
+            Your 14-Day Journey
+        </h3>
+
+        <p>
+            Track your progress, one day at a time.
+        </p>
+
+        <div id="calendar-container"></div>
+
+        <button id="extend-challenge">
+            + Extend My Journey by 14 Days
+        </button>
+
+    </div>
+
+</section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
